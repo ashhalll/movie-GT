@@ -10,7 +10,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # Matrix Factorization Model with enhanced collaborative filtering
 class MatrixFactorization(torch.nn.Module):
-    def __init__(self, n_users, n_items, n_factors=32):  # Increased factors
+    def __init__(self, n_users, n_items, n_factors=32):  # factors
         super().__init__()
         self.user_factors = torch.nn.Embedding(n_users, n_factors)
         self.item_factors = torch.nn.Embedding(n_items, n_factors)
